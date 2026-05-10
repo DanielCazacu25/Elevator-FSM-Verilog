@@ -40,8 +40,8 @@ module Elevator_tb;
         {clk,rst,b_p,c_f,t_f} = 0;
         @(negedge clk) rst = 1'b1;
         @(negedge clk) rst = 1'b0;
-        c_f = 3'd3;
-        t_f = 3'd0;
+        c_f = 3'd0;
+        t_f = 3'd3;
         b_p = 1'b1;
         wait(d_o == 1'b1)
         
@@ -49,13 +49,13 @@ module Elevator_tb;
         
         @(negedge clk) b_p = 0;
 
-        wait(motor == 1'b1 && dir == 1'b0);
+        wait(motor == 1'b1 && dir == 1'b1);
 
         $display("At the time (%0t) the elevator started going the the floor:%d",$time, t_f);
 
         repeat(3) begin
             #50;
-            c_f = c_f - 1'b1;
+            c_f = c_f + 1'b1;
             $display("The current floor is: %d",c_f);
         end
 
