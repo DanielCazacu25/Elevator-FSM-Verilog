@@ -30,8 +30,8 @@ The logic of the controller is visually represented in the state diagram below. 
 
 | Folder/File | Description |
 | :---------- | :---------- |
-| `src/` | Contains the main hardware circuit module (`Elevator.v`). |
-| `sim/` | Contains the simulation testbench (`Elevator_tb.v`). |
+| `Design/` | Contains the main hardware circuit module (`Elevator.v`). |
+| `Testbench/` | Contains the simulation testbench (`Elevator_tb.v`). |
 | `guide_images/` | Contains visual guides for Vivado setup. |
 | `results/` | Contains the State Diagram SVG, screenshots of Waveforms and Tcl Console. |
 
